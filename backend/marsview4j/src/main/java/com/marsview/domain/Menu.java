@@ -74,7 +74,7 @@ public class Menu implements Serializable {
     /**
      * 通行证id
      */
-    private Integer userId;
+    private Long userId;
 
     /**
      * 姓名

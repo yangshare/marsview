@@ -29,7 +29,7 @@ public class Pages implements Serializable {
     /**
      * 用户ID
      */
-    private Integer userId;
+    private Long userId;
 
     /**
      * 用户名
@@ -47,7 +47,7 @@ public class Pages implements Serializable {
     private String remark;
 
     /**
-     * 是否开放 1-公开 2-私有
+     * 是否开放 1-我的 2-市场
      */
     private Integer isPublic;
 

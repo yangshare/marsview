@@ -17,6 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
@@ -94,9 +95,17 @@ public class UserController extends BasicController {
     message.setFrom("");
     message.setTo(dto.getEmail());
     message.setSubject("lowcode账号注册");
-    message.setText("您当前的验证码为：" + code + "，3分钟内有效。感谢您成为lowcode一员。");
-    mailSender.send(message);
-    return getResponse();
+    String codeStr = "您当前的验证码为：" + code + "，3分钟内有效。感谢您成为lowcode一员。";
+    System.out.println(codeStr);
+    message.setText(codeStr);
+    try {
+      mailSender.send(message);
+      return getResponse();
+    }catch (MailException e){
+      e.printStackTrace();
+      return getErrorResponse("邮件发送失败,请联系管理员！");
+    }
+
   }
 
   /**

@@ -64,10 +64,10 @@ public class Projects implements Serializable {
     /**
      * 通行证id
      */
-    private Integer userId;
+    private Long userId;
 
     /**
-     * 是否开放 1-公开 2-私有
+     * 是否开放 1-我的 2-市场
      */
     private Integer isPublic;
 
