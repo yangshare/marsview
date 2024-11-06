@@ -14,7 +14,7 @@ import lombok.Data;
  */
 @TableName(value ="imgcloud")
 @Data
-public class Imgcloud implements Serializable {
+public class ImgCloud implements Serializable {
     /**
      * 主键ID
      */
@@ -75,7 +75,7 @@ public class Imgcloud implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        Imgcloud other = (Imgcloud) that;
+        ImgCloud other = (ImgCloud) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
             && (this.getUserName() == null ? other.getUserName() == null : this.getUserName().equals(other.getUserName()))
