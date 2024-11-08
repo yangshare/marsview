@@ -3,18 +3,14 @@ package com.marsview.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.marsview.controller.basic.BasicController;
+import com.marsview.controller.basic.Builder;
 import com.marsview.controller.basic.ResultResponse;
 import com.marsview.domain.Projects;
 import com.marsview.domain.Users;
 import com.marsview.dto.ProjectsDto;
-import com.marsview.controller.basic.BasicController;
-import com.marsview.controller.basic.Builder;
 import com.marsview.service.ProjectsService;
-import com.marsview.util.HtmlUtil;
 import com.marsview.util.SessionUtils;
-import com.marsview.mapper.ProjectsMapper;
-import com.marsview.mapper.RolesMapper;
-import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.BeanUtils;
@@ -40,8 +36,6 @@ public class ProjectController extends BasicController {
   @Autowired
   private ProjectsService projectsService;
 
-  @Resource
-  private RolesMapper rolesMapper;
 
   /**
    * 分页获取项目列表

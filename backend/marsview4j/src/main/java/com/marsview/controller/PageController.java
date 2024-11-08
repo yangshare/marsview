@@ -8,29 +8,20 @@ import com.marsview.controller.basic.Builder;
 import com.marsview.controller.basic.ResultResponse;
 import com.marsview.domain.Menu;
 import com.marsview.domain.Pages;
-import com.marsview.domain.Projects;
 import com.marsview.domain.Users;
 import com.marsview.dto.PagesDto;
-import com.marsview.dto.ProjectsDto;
+import com.marsview.mapper.RolesMapper;
 import com.marsview.service.MenuService;
 import com.marsview.service.PagesService;
-import com.marsview.util.HtmlUtil;
 import com.marsview.util.SessionUtils;
-import com.marsview.mapper.MenuMapper;
-import com.marsview.mapper.PagesMapper;
-import com.marsview.mapper.RolesMapper;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * <p>类说明</p>
